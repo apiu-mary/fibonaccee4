@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.fibonaccee4.R
 
-class numbersRvAdapter(var numbersList: List<Int>): Adapter<NumbersViewHolder>(){
+class  numbersRvAdapter(var numbersList: List<String>): Adapter<NumbersViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumbersViewHolder {
         val itemView = LayoutInflater.from(parent.context)
             .inflate(R.layout.numbers, parent, false)
@@ -29,5 +29,5 @@ class numbersRvAdapter(var numbersList: List<Int>): Adapter<NumbersViewHolder>()
 
 
 class NumbersViewHolder(itemView: View): ViewHolder(itemView){                         // has an attribute view after creating this adapter class
-    var tvnumbers = itemView.findViewById<TextView>(R.id.tvnumbers)
+    var tvnumbers: TextView = itemView.findViewById<TextView>(R.id.tvnumbers)
 }
